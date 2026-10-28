@@ -39,10 +39,10 @@ class InvariantKind(StrEnum):
 class Condition(StrEnum):
     """Experimental conditions varying the context and feedback provided to the LLM.
 
-    C0: Baseline - only device configurations and the new intent text.
-    C1: Verification feedback provided upon failure.
-    C2: Multi-turn retry loop with progressive verification feedback.
-    C3: Policy ledger provided containing all previously committed invariants.
+    C0: no help (open-loop baseline)
+    C1: checker feedback + up to 3 retries
+    C2: prompt lists only the affected rules
+    C3: full guard (bad edits are rejected and never committed)
     """
 
     C0 = "C0"
@@ -78,7 +78,7 @@ class Intent(BaseModel):
     patches used by evaluation oracles.
     """
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="allow")
 
     id: str = Field(description="Unique identifier for the intent.")
     sequence_id: str = Field(description="Identifier of the sequence this intent belongs to.")
@@ -105,7 +105,7 @@ class Invariant(BaseModel):
     or waypoint routing) established at earlier steps that future changes must not regress.
     """
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="allow")
 
     id: str = Field(description="Unique identifier for the invariant.")
     kind: InvariantKind = Field(description="Invariant policy kind (reach, isolate, waypoint).")
@@ -125,10 +125,10 @@ class StepResult(BaseModel):
     """Record of an evaluated LLM interaction step.
 
     Appended to JSONL run logs to record parsing success, verification outcomes,
-    token consumption, and wall-clock latency for statistical analysis.
+    token consumption, wall-clock latency, and cuc harness telemetry for statistical analysis.
     """
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="allow")
 
     run_id: str = Field(description="Unique evaluation run identifier.")
     model: str = Field(description="Model identifier or configuration name under test.")
@@ -155,3 +155,11 @@ class StepResult(BaseModel):
     committed: bool = Field(
         description="Whether the patch was committed to the active topology configuration."
     )
+    violated_now: int = Field(default=0, description="Number of invariant violations at the current step.")
+    model_errors: list[str] = Field(default_factory=list, description="Errors produced by the model output.")
+    first_attempt_regression: bool = Field(default=False, description="True if regression occurred on first attempt.")
+    intent_type: str | None = Field(default=None, description="Type of intent being processed.")
+    model_name: str | None = Field(default=None, description="Model name identifier.")
+    resumed: bool = Field(default=False, description="True if step was resumed from checkpoint.")
+
+

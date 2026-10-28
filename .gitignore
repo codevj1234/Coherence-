@@ -1,0 +1,6 @@
+__pycache__/
+audit/temp*
+runs/test_*
+demo_*.txt
+.pytest_cache/
+*.pyc

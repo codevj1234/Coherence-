@@ -234,7 +234,10 @@ models:
    - When modifying instructions or changing output constraints, bump `PROMPT_VERSION` (e.g., from `"v1"` to `"v2"`) to ensure benchmark run comparability is tracked.
 2. **Context & Section Assembly** (`agent/prompts/builder.py`):
    - The `build_prompt` function assembles the prompt according to experimental conditions:
-     - `C0`: Baseline (device configs + intent text).
+     - `C0`: no help (open-loop baseline)
+     - `C1`: checker feedback + up to 3 retries
+     - `C2`: prompt lists only the affected rules
+     - `C3`: full guard (bad edits are rejected and never committed)
      - `C1` / `C2`: Verification feedback section appended.
      - `C3`: Policy ledger section included (invariants that must continue to hold).
    - **Safety Invariant**: Prompts must **never** include ground truth patches (`gold_patch`) or internal verification data. Gold patches are protected structurally: `build_prompt` rejects objects carrying `gold_patch`, and there is deliberately no keyword filter on the word `gold` (allowing valid networking terms such as `gold-vlan`).
