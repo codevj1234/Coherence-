@@ -1,2 +1,0 @@
-{"run_id":"dryrun-4895adfb","model":"mock_malformed","condition":"C0","sequence_id":"seq-dryrun-001","step":0,"parse_ok":false,"new_intent_ok":false,"broken_invariants":[],"outcome":"PARSE_FAIL","retries":0,"tokens_in":388,"tokens_out":22,"latency_ms":1,"committed":false}
-{"run_id":"dryrun-4895adfb","model":"mock_malformed","condition":"C0","sequence_id":"seq-dryrun-001","step":1,"parse_ok":false,"new_intent_ok":false,"broken_invariants":[],"outcome":"PARSE_FAIL","retries":0,"tokens_in":388,"tokens_out":22,"latency_ms":1,"committed":false}
