@@ -1,0 +1,2724 @@
+{
+  "generator_version": "1.0.0",
+  "invariants_added": {
+    "0": {
+      "created_at_step": 0,
+      "destination": "10.51.2.26",
+      "headers": {
+        "dst_port": 143,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_000_deny_tcp_143",
+      "kind": "isolate",
+      "source": "10.51.49.49",
+      "via": null
+    },
+    "1": {
+      "created_at_step": 1,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "10": {
+      "created_at_step": 10,
+      "destination": "10.51.1.83",
+      "headers": {
+        "dst_port": 143,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_010_permit_shadow_143",
+      "kind": "reach",
+      "source": "10.51.49.76",
+      "via": null
+    },
+    "100": {
+      "created_at_step": 100,
+      "destination": "10.51.49.33",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_100_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.23",
+      "via": "te_l_fw1"
+    },
+    "101": {
+      "created_at_step": 101,
+      "destination": "10.51.49.11",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_101_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.19",
+      "via": "te_l_fw1"
+    },
+    "102": {
+      "created_at_step": 102,
+      "destination": "10.51.49.18",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_102_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.14",
+      "via": "te_l_fw1"
+    },
+    "103": {
+      "created_at_step": 103,
+      "destination": "10.51.2.26",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_103_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.51.1.11",
+      "via": null
+    },
+    "104": {
+      "created_at_step": 104,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_104_prefix_filter_191",
+      "kind": "isolate",
+      "source": "192.168.191.10",
+      "via": null
+    },
+    "105": {
+      "created_at_step": 105,
+      "destination": "10.51.249.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_105_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "106": {
+      "created_at_step": 106,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_106_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "107": {
+      "created_at_step": 107,
+      "destination": "10.51.49.16",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_107_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.21",
+      "via": "te_l_fw1"
+    },
+    "108": {
+      "created_at_step": 108,
+      "destination": "10.51.0.48",
+      "headers": {
+        "dst_port": 8888,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_108_permit_tcp_8888",
+      "kind": "reach",
+      "source": "10.51.1.15",
+      "via": null
+    },
+    "109": {
+      "created_at_step": 109,
+      "destination": "10.51.49.46",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_109_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.11",
+      "via": "te_l_fw1"
+    },
+    "11": {
+      "created_at_step": 11,
+      "destination": "10.51.102.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_011_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.101.202",
+      "via": null
+    },
+    "110": {
+      "created_at_step": 110,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_110_prefix_filter_80",
+      "kind": "isolate",
+      "source": "192.168.80.10",
+      "via": null
+    },
+    "111": {
+      "created_at_step": 111,
+      "destination": "10.51.2.11",
+      "headers": {
+        "dst_port": 993,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_111_deny_tcp_993",
+      "kind": "isolate",
+      "source": "10.51.48.38",
+      "via": null
+    },
+    "112": {
+      "created_at_step": 112,
+      "destination": "10.51.49.39",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_112_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.49",
+      "via": "te_l_fw1"
+    },
+    "113": {
+      "created_at_step": 113,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_113_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "114": {
+      "created_at_step": 114,
+      "destination": "10.51.1.22",
+      "headers": {
+        "dst_port": 143,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_114_deny_tcp_143",
+      "kind": "isolate",
+      "source": "10.51.48.34",
+      "via": null
+    },
+    "115": {
+      "created_at_step": 115,
+      "destination": "10.51.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_115_prefix_filter_62",
+      "kind": "isolate",
+      "source": "192.168.62.10",
+      "via": null
+    },
+    "116": {
+      "created_at_step": 116,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_116_prefix_filter_18",
+      "kind": "isolate",
+      "source": "192.168.18.10",
+      "via": null
+    },
+    "117": {
+      "created_at_step": 117,
+      "destination": "10.51.1.31",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_117_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.51.2.36",
+      "via": null
+    },
+    "118": {
+      "created_at_step": 118,
+      "destination": "10.51.49.16",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_118_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.47",
+      "via": "te_l_fw1"
+    },
+    "119": {
+      "created_at_step": 119,
+      "destination": "10.51.49.35",
+      "headers": {
+        "dst_port": 8888,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_119_permit_tcp_8888",
+      "kind": "reach",
+      "source": "10.51.48.34",
+      "via": null
+    },
+    "12": {
+      "created_at_step": 12,
+      "destination": "10.51.148.81",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_012_vrf_flow_12",
+      "kind": "reach",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "120": {
+      "created_at_step": 120,
+      "destination": "10.51.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_120_prefix_filter_90",
+      "kind": "isolate",
+      "source": "192.168.90.10",
+      "via": null
+    },
+    "121": {
+      "created_at_step": 121,
+      "destination": "10.51.2.34",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_121_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.51.48.11",
+      "via": null
+    },
+    "122": {
+      "created_at_step": 122,
+      "destination": "10.51.49.29",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_122_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.26",
+      "via": "te_l_fw1"
+    },
+    "123": {
+      "created_at_step": 123,
+      "destination": "10.51.202.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_123_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.102.20",
+      "via": null
+    },
+    "124": {
+      "created_at_step": 124,
+      "destination": "10.51.49.15",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_124_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.44",
+      "via": "te_l_fw1"
+    },
+    "125": {
+      "created_at_step": 125,
+      "destination": "10.51.49.15",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_125_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.14",
+      "via": "te_l_fw1"
+    },
+    "126": {
+      "created_at_step": 126,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_126_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "127": {
+      "created_at_step": 127,
+      "destination": "10.51.49.42",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_127_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.51.1.11",
+      "via": null
+    },
+    "128": {
+      "created_at_step": 128,
+      "destination": "10.51.1.36",
+      "headers": {
+        "dst_port": 143,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_128_deny_tcp_143",
+      "kind": "isolate",
+      "source": "10.51.49.37",
+      "via": null
+    },
+    "129": {
+      "created_at_step": 129,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_129_prefix_filter_167",
+      "kind": "isolate",
+      "source": "192.168.167.10",
+      "via": null
+    },
+    "13": {
+      "created_at_step": 13,
+      "destination": "10.51.2.67",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_013_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.80",
+      "via": null
+    },
+    "130": {
+      "created_at_step": 130,
+      "destination": "10.51.48.20",
+      "headers": {
+        "dst_port": 143,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_130_deny_tcp_143",
+      "kind": "isolate",
+      "source": "10.51.2.12",
+      "via": null
+    },
+    "131": {
+      "created_at_step": 131,
+      "destination": "10.51.49.11",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_131_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.24",
+      "via": "te_l_fw1"
+    },
+    "132": {
+      "created_at_step": 132,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_132_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "133": {
+      "created_at_step": 133,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_133_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "134": {
+      "created_at_step": 134,
+      "destination": "10.51.49.37",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_134_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.33",
+      "via": "te_l_fw1"
+    },
+    "135": {
+      "created_at_step": 135,
+      "destination": "10.51.2.15",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_135_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.51.1.26",
+      "via": null
+    },
+    "136": {
+      "created_at_step": 136,
+      "destination": "10.51.1.36",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_136_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.51.49.33",
+      "via": null
+    },
+    "137": {
+      "created_at_step": 137,
+      "destination": "10.51.49.48",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_137_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.21",
+      "via": "te_l_fw1"
+    },
+    "138": {
+      "created_at_step": 138,
+      "destination": "10.51.249.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_138_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "139": {
+      "created_at_step": 139,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_139_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "14": {
+      "created_at_step": 14,
+      "destination": "10.51.101.81",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_014_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.101.212",
+      "via": null
+    },
+    "140": {
+      "created_at_step": 140,
+      "destination": "10.51.202.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_140_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.102.20",
+      "via": null
+    },
+    "141": {
+      "created_at_step": 141,
+      "destination": "10.51.0.18",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_141_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.51.49.41",
+      "via": null
+    },
+    "142": {
+      "created_at_step": 142,
+      "destination": "10.51.1.16",
+      "headers": {
+        "dst_port": 9000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_142_permit_tcp_9000",
+      "kind": "reach",
+      "source": "10.51.49.29",
+      "via": null
+    },
+    "143": {
+      "created_at_step": 143,
+      "destination": "10.51.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_143_prefix_filter_188",
+      "kind": "isolate",
+      "source": "192.168.188.10",
+      "via": null
+    },
+    "144": {
+      "created_at_step": 144,
+      "destination": "10.51.1.41",
+      "headers": {
+        "dst_port": 143,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_144_deny_tcp_143",
+      "kind": "isolate",
+      "source": "10.51.2.28",
+      "via": null
+    },
+    "145": {
+      "created_at_step": 145,
+      "destination": "10.51.48.41",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_145_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.51.49.43",
+      "via": null
+    },
+    "146": {
+      "created_at_step": 146,
+      "destination": "10.51.202.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_146_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.102.20",
+      "via": null
+    },
+    "147": {
+      "created_at_step": 147,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_147_prefix_filter_150",
+      "kind": "isolate",
+      "source": "192.168.150.10",
+      "via": null
+    },
+    "148": {
+      "created_at_step": 148,
+      "destination": "10.51.249.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_148_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "149": {
+      "created_at_step": 149,
+      "destination": "10.51.49.33",
+      "headers": {
+        "dst_port": 69,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_149_deny_tcp_69",
+      "kind": "isolate",
+      "source": "10.51.1.50",
+      "via": null
+    },
+    "15": {
+      "created_at_step": 15,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_015_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "150": {
+      "created_at_step": 150,
+      "destination": "10.51.1.45",
+      "headers": {
+        "dst_port": 21,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_150_deny_tcp_21",
+      "kind": "isolate",
+      "source": "10.51.2.38",
+      "via": null
+    },
+    "151": {
+      "created_at_step": 151,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_151_prefix_filter_76",
+      "kind": "isolate",
+      "source": "192.168.76.10",
+      "via": null
+    },
+    "152": {
+      "created_at_step": 152,
+      "destination": "10.51.49.15",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_152_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.14",
+      "via": "te_l_fw1"
+    },
+    "153": {
+      "created_at_step": 153,
+      "destination": "10.51.49.10",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_153_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.40",
+      "via": "te_l_fw1"
+    },
+    "154": {
+      "created_at_step": 154,
+      "destination": "10.51.0.39",
+      "headers": {
+        "dst_port": 9000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_154_permit_tcp_9000",
+      "kind": "reach",
+      "source": "10.51.49.28",
+      "via": null
+    },
+    "155": {
+      "created_at_step": 155,
+      "destination": "10.51.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_155_prefix_filter_115",
+      "kind": "isolate",
+      "source": "192.168.115.10",
+      "via": null
+    },
+    "156": {
+      "created_at_step": 156,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_156_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "157": {
+      "created_at_step": 157,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_157_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "158": {
+      "created_at_step": 158,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_158_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "159": {
+      "created_at_step": 159,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_159_prefix_filter_143",
+      "kind": "isolate",
+      "source": "192.168.143.10",
+      "via": null
+    },
+    "16": {
+      "created_at_step": 16,
+      "destination": "10.51.148.83",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_016_vrf_flow_16",
+      "kind": "reach",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "160": {
+      "created_at_step": 160,
+      "destination": "10.51.2.47",
+      "headers": {
+        "dst_port": 8888,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_160_permit_tcp_8888",
+      "kind": "reach",
+      "source": "10.51.49.43",
+      "via": null
+    },
+    "161": {
+      "created_at_step": 161,
+      "destination": "10.51.48.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_161_prefix_filter_185",
+      "kind": "isolate",
+      "source": "192.168.185.10",
+      "via": null
+    },
+    "162": {
+      "created_at_step": 162,
+      "destination": "10.51.0.25",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_162_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.51.1.14",
+      "via": null
+    },
+    "163": {
+      "created_at_step": 163,
+      "destination": "10.51.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_163_prefix_filter_101",
+      "kind": "isolate",
+      "source": "192.168.101.10",
+      "via": null
+    },
+    "164": {
+      "created_at_step": 164,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_164_prefix_filter_167",
+      "kind": "isolate",
+      "source": "192.168.167.10",
+      "via": null
+    },
+    "165": {
+      "created_at_step": 165,
+      "destination": "10.51.49.27",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_165_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.45",
+      "via": "te_l_fw1"
+    },
+    "166": {
+      "created_at_step": 166,
+      "destination": "10.51.48.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_166_prefix_filter_28",
+      "kind": "isolate",
+      "source": "192.168.28.10",
+      "via": null
+    },
+    "167": {
+      "created_at_step": 167,
+      "destination": "10.51.0.33",
+      "headers": {
+        "dst_port": 993,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_167_deny_tcp_993",
+      "kind": "isolate",
+      "source": "10.51.49.25",
+      "via": null
+    },
+    "168": {
+      "created_at_step": 168,
+      "destination": "10.51.49.22",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_168_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.27",
+      "via": "te_l_fw1"
+    },
+    "169": {
+      "created_at_step": 169,
+      "destination": "10.51.49.19",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_169_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.14",
+      "via": "te_l_fw1"
+    },
+    "17": {
+      "created_at_step": 17,
+      "destination": "10.51.1.36",
+      "headers": {
+        "dst_port": 993,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_017_deny_tcp_993",
+      "kind": "isolate",
+      "source": "10.51.2.41",
+      "via": null
+    },
+    "170": {
+      "created_at_step": 170,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_170_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "171": {
+      "created_at_step": 171,
+      "destination": "10.51.48.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_171_prefix_filter_58",
+      "kind": "isolate",
+      "source": "192.168.58.10",
+      "via": null
+    },
+    "172": {
+      "created_at_step": 172,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_172_prefix_filter_175",
+      "kind": "isolate",
+      "source": "192.168.175.10",
+      "via": null
+    },
+    "173": {
+      "created_at_step": 173,
+      "destination": "10.51.1.21",
+      "headers": {
+        "dst_port": 110,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_173_deny_tcp_110",
+      "kind": "isolate",
+      "source": "10.51.48.40",
+      "via": null
+    },
+    "174": {
+      "created_at_step": 174,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_174_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "175": {
+      "created_at_step": 175,
+      "destination": "10.51.48.49",
+      "headers": {
+        "dst_port": 110,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_175_deny_tcp_110",
+      "kind": "isolate",
+      "source": "10.51.1.19",
+      "via": null
+    },
+    "176": {
+      "created_at_step": 176,
+      "destination": "10.51.2.10",
+      "headers": {
+        "dst_port": 69,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_176_deny_tcp_69",
+      "kind": "isolate",
+      "source": "10.51.48.11",
+      "via": null
+    },
+    "177": {
+      "created_at_step": 177,
+      "destination": "10.51.49.25",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_177_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.10",
+      "via": "te_l_fw1"
+    },
+    "178": {
+      "created_at_step": 178,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_178_prefix_filter_146",
+      "kind": "isolate",
+      "source": "192.168.146.10",
+      "via": null
+    },
+    "179": {
+      "created_at_step": 179,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_179_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "18": {
+      "created_at_step": 18,
+      "destination": "10.51.201.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_018_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "180": {
+      "created_at_step": 180,
+      "destination": "10.51.49.12",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_180_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.16",
+      "via": "te_l_fw1"
+    },
+    "181": {
+      "created_at_step": 181,
+      "destination": "10.51.49.48",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_181_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.16",
+      "via": "te_l_fw1"
+    },
+    "182": {
+      "created_at_step": 182,
+      "destination": "10.51.201.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_182_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "183": {
+      "created_at_step": 183,
+      "destination": "10.51.48.28",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_183_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.51.1.15",
+      "via": null
+    },
+    "184": {
+      "created_at_step": 184,
+      "destination": "10.51.0.48",
+      "headers": {
+        "dst_port": 993,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_184_deny_tcp_993",
+      "kind": "isolate",
+      "source": "10.51.49.37",
+      "via": null
+    },
+    "185": {
+      "created_at_step": 185,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_185_prefix_filter_60",
+      "kind": "isolate",
+      "source": "192.168.60.10",
+      "via": null
+    },
+    "186": {
+      "created_at_step": 186,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_186_prefix_filter_18",
+      "kind": "isolate",
+      "source": "192.168.18.10",
+      "via": null
+    },
+    "187": {
+      "created_at_step": 187,
+      "destination": "10.51.2.38",
+      "headers": {
+        "dst_port": 8888,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_187_permit_tcp_8888",
+      "kind": "reach",
+      "source": "10.51.1.12",
+      "via": null
+    },
+    "188": {
+      "created_at_step": 188,
+      "destination": "10.51.49.43",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_188_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.21",
+      "via": "te_l_fw1"
+    },
+    "189": {
+      "created_at_step": 189,
+      "destination": "10.51.248.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_189_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "19": {
+      "created_at_step": 19,
+      "destination": "10.51.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_019_prefix_filter_124",
+      "kind": "isolate",
+      "source": "192.168.124.10",
+      "via": null
+    },
+    "190": {
+      "created_at_step": 190,
+      "destination": "10.51.0.24",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_190_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.51.1.27",
+      "via": null
+    },
+    "191": {
+      "created_at_step": 191,
+      "destination": "10.51.202.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_191_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.102.20",
+      "via": null
+    },
+    "192": {
+      "created_at_step": 192,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_192_prefix_filter_39",
+      "kind": "isolate",
+      "source": "192.168.39.10",
+      "via": null
+    },
+    "193": {
+      "created_at_step": 193,
+      "destination": "10.51.48.28",
+      "headers": {
+        "dst_port": 9000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_193_permit_tcp_9000",
+      "kind": "reach",
+      "source": "10.51.1.31",
+      "via": null
+    },
+    "194": {
+      "created_at_step": 194,
+      "destination": "10.51.0.38",
+      "headers": {
+        "dst_port": 993,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_194_deny_tcp_993",
+      "kind": "isolate",
+      "source": "10.51.1.14",
+      "via": null
+    },
+    "195": {
+      "created_at_step": 195,
+      "destination": "10.51.49.24",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_195_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.29",
+      "via": "te_l_fw1"
+    },
+    "196": {
+      "created_at_step": 196,
+      "destination": "10.51.2.37",
+      "headers": {
+        "dst_port": 110,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_196_deny_tcp_110",
+      "kind": "isolate",
+      "source": "10.51.48.41",
+      "via": null
+    },
+    "197": {
+      "created_at_step": 197,
+      "destination": "10.51.48.38",
+      "headers": {
+        "dst_port": 110,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_197_deny_tcp_110",
+      "kind": "isolate",
+      "source": "10.51.1.42",
+      "via": null
+    },
+    "198": {
+      "created_at_step": 198,
+      "destination": "10.51.2.35",
+      "headers": {
+        "dst_port": 69,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_198_deny_tcp_69",
+      "kind": "isolate",
+      "source": "10.51.48.36",
+      "via": null
+    },
+    "199": {
+      "created_at_step": 199,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_199_prefix_filter_102",
+      "kind": "isolate",
+      "source": "192.168.102.10",
+      "via": null
+    },
+    "2": {
+      "created_at_step": 2,
+      "destination": "10.51.48.65",
+      "headers": {
+        "dst_port": 3389,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_002_permit_shadow_3389",
+      "kind": "reach",
+      "source": "10.51.0.72",
+      "via": null
+    },
+    "20": {
+      "created_at_step": 20,
+      "destination": "10.51.0.32",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_020_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.51.2.39",
+      "via": null
+    },
+    "21": {
+      "created_at_step": 21,
+      "destination": "10.51.1.69",
+      "headers": {
+        "dst_port": 23,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_021_permit_shadow_23",
+      "kind": "reach",
+      "source": "10.51.0.69",
+      "via": null
+    },
+    "22": {
+      "created_at_step": 22,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_022_prefix_filter_131",
+      "kind": "isolate",
+      "source": "192.168.131.10",
+      "via": null
+    },
+    "23": {
+      "created_at_step": 23,
+      "destination": "10.51.49.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_023_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.1.192",
+      "via": null
+    },
+    "24": {
+      "created_at_step": 24,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_024_prefix_filter_140",
+      "kind": "isolate",
+      "source": "192.168.140.10",
+      "via": null
+    },
+    "25": {
+      "created_at_step": 25,
+      "destination": "10.51.101.88",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_025_vrf_flow_25",
+      "kind": "reach",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "26": {
+      "created_at_step": 26,
+      "destination": "10.51.0.64",
+      "headers": {
+        "dst_port": 143,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_026_permit_shadow_143",
+      "kind": "reach",
+      "source": "10.51.49.82",
+      "via": null
+    },
+    "27": {
+      "created_at_step": 27,
+      "destination": "10.51.49.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_027_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.1.202",
+      "via": null
+    },
+    "28": {
+      "created_at_step": 28,
+      "destination": "10.51.101.84",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_028_vrf_flow_28",
+      "kind": "reach",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "29": {
+      "created_at_step": 29,
+      "destination": "10.51.249.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "3": {
+      "created_at_step": 3,
+      "destination": "10.51.201.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_003_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "30": {
+      "created_at_step": 30,
+      "destination": "10.51.48.89",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_030_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.62",
+      "via": null
+    },
+    "31": {
+      "created_at_step": 31,
+      "destination": "10.51.1.69",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_031_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.0.197",
+      "via": null
+    },
+    "32": {
+      "created_at_step": 32,
+      "destination": "10.51.101.60",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_032_vrf_flow_32",
+      "kind": "reach",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "33": {
+      "created_at_step": 33,
+      "destination": "10.51.49.40",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_033_deny_tcp_8000",
+      "kind": "isolate",
+      "source": "10.51.1.41",
+      "via": null
+    },
+    "34": {
+      "created_at_step": 34,
+      "destination": "10.51.249.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_034_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "35": {
+      "created_at_step": 35,
+      "destination": "10.51.49.69",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_035_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.87",
+      "via": null
+    },
+    "36": {
+      "created_at_step": 36,
+      "destination": "10.51.101.84",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_036_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.101.212",
+      "via": null
+    },
+    "37": {
+      "created_at_step": 37,
+      "destination": "10.51.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_037_prefix_filter_36",
+      "kind": "isolate",
+      "source": "192.168.36.10",
+      "via": null
+    },
+    "38": {
+      "created_at_step": 38,
+      "destination": "10.51.49.34",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_038_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.28",
+      "via": "te_l_fw1"
+    },
+    "39": {
+      "created_at_step": 39,
+      "destination": "10.51.149.68",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_039_vrf_flow_39",
+      "kind": "reach",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "4": {
+      "created_at_step": 4,
+      "destination": "10.51.102.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_004_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.101.202",
+      "via": null
+    },
+    "40": {
+      "created_at_step": 40,
+      "destination": "10.51.49.33",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_040_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.40",
+      "via": "te_l_fw1"
+    },
+    "41": {
+      "created_at_step": 41,
+      "destination": "10.51.2.22",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_041_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.51.1.37",
+      "via": null
+    },
+    "42": {
+      "created_at_step": 42,
+      "destination": "10.51.48.78",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_042_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.79",
+      "via": null
+    },
+    "43": {
+      "created_at_step": 43,
+      "destination": "10.51.0.48",
+      "headers": {
+        "dst_port": 8888,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_043_permit_tcp_8888",
+      "kind": "reach",
+      "source": "10.51.2.12",
+      "via": null
+    },
+    "44": {
+      "created_at_step": 44,
+      "destination": "10.51.1.83",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_044_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.49.204",
+      "via": null
+    },
+    "45": {
+      "created_at_step": 45,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_045_prefix_filter_108",
+      "kind": "isolate",
+      "source": "192.168.108.10",
+      "via": null
+    },
+    "46": {
+      "created_at_step": 46,
+      "destination": "10.51.149.90",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_046_vrf_flow_46",
+      "kind": "reach",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "47": {
+      "created_at_step": 47,
+      "destination": "10.51.49.49",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_047_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.32",
+      "via": "te_l_fw1"
+    },
+    "48": {
+      "created_at_step": 48,
+      "destination": "10.51.48.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_048_prefix_filter_196",
+      "kind": "isolate",
+      "source": "192.168.196.10",
+      "via": null
+    },
+    "49": {
+      "created_at_step": 49,
+      "destination": "10.51.2.72",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_049_permit_shadow_8000",
+      "kind": "reach",
+      "source": "10.51.1.74",
+      "via": null
+    },
+    "5": {
+      "created_at_step": 5,
+      "destination": "10.51.101.65",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_005_vrf_flow_5",
+      "kind": "reach",
+      "source": "10.51.101.10",
+      "via": null
+    },
+    "50": {
+      "created_at_step": 50,
+      "destination": "10.51.48.18",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_050_deny_tcp_8000",
+      "kind": "isolate",
+      "source": "10.51.1.35",
+      "via": null
+    },
+    "51": {
+      "created_at_step": 51,
+      "destination": "10.51.1.83",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_051_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.49.204",
+      "via": null
+    },
+    "52": {
+      "created_at_step": 52,
+      "destination": "10.51.101.69",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_052_vrf_flow_52",
+      "kind": "reach",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "53": {
+      "created_at_step": 53,
+      "destination": "10.51.2.74",
+      "headers": {
+        "dst_port": 3389,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_053_permit_shadow_3389",
+      "kind": "reach",
+      "source": "10.51.0.69",
+      "via": null
+    },
+    "54": {
+      "created_at_step": 54,
+      "destination": "10.51.101.60",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_054_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.101.212",
+      "via": null
+    },
+    "55": {
+      "created_at_step": 55,
+      "destination": "10.51.1.20",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_055_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.51.49.13",
+      "via": null
+    },
+    "56": {
+      "created_at_step": 56,
+      "destination": "10.51.149.62",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_056_vrf_flow_56",
+      "kind": "reach",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "57": {
+      "created_at_step": 57,
+      "destination": "10.51.49.26",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_057_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.33",
+      "via": "te_l_fw1"
+    },
+    "58": {
+      "created_at_step": 58,
+      "destination": "10.51.48.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_058_prefix_filter_58",
+      "kind": "isolate",
+      "source": "192.168.58.10",
+      "via": null
+    },
+    "59": {
+      "created_at_step": 59,
+      "destination": "10.51.49.73",
+      "headers": {
+        "dst_port": 3389,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_059_permit_shadow_3389",
+      "kind": "reach",
+      "source": "10.51.0.84",
+      "via": null
+    },
+    "6": {
+      "created_at_step": 6,
+      "destination": "10.51.49.60",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_006_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.74",
+      "via": null
+    },
+    "60": {
+      "created_at_step": 60,
+      "destination": "10.51.1.83",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_060_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.49.204",
+      "via": null
+    },
+    "61": {
+      "created_at_step": 61,
+      "destination": "10.51.148.69",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_061_vrf_flow_61",
+      "kind": "reach",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "62": {
+      "created_at_step": 62,
+      "destination": "10.51.49.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_062_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.1.202",
+      "via": null
+    },
+    "63": {
+      "created_at_step": 63,
+      "destination": "10.51.49.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_063_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.1.202",
+      "via": null
+    },
+    "64": {
+      "created_at_step": 64,
+      "destination": "10.51.149.68",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_064_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.149.212",
+      "via": null
+    },
+    "65": {
+      "created_at_step": 65,
+      "destination": "10.51.49.39",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_065_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.51.0.50",
+      "via": "te_l_fw1"
+    },
+    "66": {
+      "created_at_step": 66,
+      "destination": "10.51.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_066_prefix_filter_28",
+      "kind": "isolate",
+      "source": "192.168.28.10",
+      "via": null
+    },
+    "67": {
+      "created_at_step": 67,
+      "destination": "10.51.2.74",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_067_permit_shadow_8000",
+      "kind": "reach",
+      "source": "10.51.1.72",
+      "via": null
+    },
+    "68": {
+      "created_at_step": 68,
+      "destination": "10.51.148.60",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_068_vrf_flow_68",
+      "kind": "reach",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "69": {
+      "created_at_step": 69,
+      "destination": "10.51.48.70",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_069_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.62",
+      "via": null
+    },
+    "7": {
+      "created_at_step": 7,
+      "destination": "10.51.49.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_007_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.1.202",
+      "via": null
+    },
+    "70": {
+      "created_at_step": 70,
+      "destination": "10.51.149.78",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_070_vrf_flow_70",
+      "kind": "reach",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "71": {
+      "created_at_step": 71,
+      "destination": "10.51.49.84",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_071_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.82",
+      "via": null
+    },
+    "72": {
+      "created_at_step": 72,
+      "destination": "10.51.101.87",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_072_vrf_flow_72",
+      "kind": "reach",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "73": {
+      "created_at_step": 73,
+      "destination": "10.51.1.71",
+      "headers": {
+        "dst_port": 3389,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_073_permit_shadow_3389",
+      "kind": "reach",
+      "source": "10.51.0.86",
+      "via": null
+    },
+    "74": {
+      "created_at_step": 74,
+      "destination": "10.51.2.67",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_074_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.0.208",
+      "via": null
+    },
+    "75": {
+      "created_at_step": 75,
+      "destination": "10.51.148.82",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_075_vrf_flow_75",
+      "kind": "reach",
+      "source": "10.51.148.20",
+      "via": null
+    },
+    "76": {
+      "created_at_step": 76,
+      "destination": "10.51.202.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_076_vrf_isolate_CORP_GUEST",
+      "kind": "isolate",
+      "source": "10.51.102.20",
+      "via": null
+    },
+    "77": {
+      "created_at_step": 77,
+      "destination": "10.51.49.26",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_077_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.38",
+      "via": "te_l_fw1"
+    },
+    "78": {
+      "created_at_step": 78,
+      "destination": "10.51.2.79",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_078_permit_shadow_8000",
+      "kind": "reach",
+      "source": "10.51.1.71",
+      "via": null
+    },
+    "79": {
+      "created_at_step": 79,
+      "destination": "10.51.149.78",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_079_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.149.212",
+      "via": null
+    },
+    "8": {
+      "created_at_step": 8,
+      "destination": "10.51.101.81",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_008_vrf_flow_8",
+      "kind": "reach",
+      "source": "10.51.101.20",
+      "via": null
+    },
+    "80": {
+      "created_at_step": 80,
+      "destination": "10.51.149.68",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_080_vrf_flow_80",
+      "kind": "reach",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "81": {
+      "created_at_step": 81,
+      "destination": "10.51.49.81",
+      "headers": {
+        "dst_port": 3389,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_081_permit_shadow_3389",
+      "kind": "reach",
+      "source": "10.51.0.79",
+      "via": null
+    },
+    "82": {
+      "created_at_step": 82,
+      "destination": "10.51.49.19",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_082_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.51.0.15",
+      "via": "te_l_fw1"
+    },
+    "83": {
+      "created_at_step": 83,
+      "destination": "10.51.102.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_083_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.101.202",
+      "via": null
+    },
+    "84": {
+      "created_at_step": 84,
+      "destination": "10.51.149.68",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_084_vrf_flow_84",
+      "kind": "reach",
+      "source": "10.51.149.20",
+      "via": null
+    },
+    "85": {
+      "created_at_step": 85,
+      "destination": "10.51.49.86",
+      "headers": {
+        "dst_port": 22,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_085_permit_shadow_22",
+      "kind": "reach",
+      "source": "10.51.0.64",
+      "via": null
+    },
+    "86": {
+      "created_at_step": 86,
+      "destination": "10.51.1.20",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_086_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.49.205",
+      "via": null
+    },
+    "87": {
+      "created_at_step": 87,
+      "destination": "10.51.102.76",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_087_vrf_flow_87",
+      "kind": "reach",
+      "source": "10.51.102.20",
+      "via": null
+    },
+    "88": {
+      "created_at_step": 88,
+      "destination": "10.51.48.87",
+      "headers": {
+        "dst_port": 993,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_088_permit_shadow_993",
+      "kind": "reach",
+      "source": "10.51.2.68",
+      "via": null
+    },
+    "89": {
+      "created_at_step": 89,
+      "destination": "10.51.49.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_089_filter_overlap",
+      "kind": "isolate",
+      "source": "10.51.1.202",
+      "via": null
+    },
+    "9": {
+      "created_at_step": 9,
+      "destination": "10.51.2.48",
+      "headers": {
+        "dst_port": 8888,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_009_permit_tcp_8888",
+      "kind": "reach",
+      "source": "10.51.49.33",
+      "via": null
+    },
+    "90": {
+      "created_at_step": 90,
+      "destination": "10.51.102.67",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_090_vrf_flow_90",
+      "kind": "reach",
+      "source": "10.51.102.20",
+      "via": null
+    },
+    "91": {
+      "created_at_step": 91,
+      "destination": "10.51.0.10",
+      "headers": {
+        "dst_port": 8443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_091_permit_tcp_8443",
+      "kind": "reach",
+      "source": "10.51.2.41",
+      "via": null
+    },
+    "92": {
+      "created_at_step": 92,
+      "destination": "10.51.49.24",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_092_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.21",
+      "via": "te_l_fw1"
+    },
+    "93": {
+      "created_at_step": 93,
+      "destination": "10.51.2.33",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_093_deny_tcp_8000",
+      "kind": "isolate",
+      "source": "10.51.1.46",
+      "via": null
+    },
+    "94": {
+      "created_at_step": 94,
+      "destination": "10.51.49.17",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_094_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.34",
+      "via": "te_l_fw1"
+    },
+    "95": {
+      "created_at_step": 95,
+      "destination": "10.51.49.17",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_095_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.51.0.14",
+      "via": "te_l_fw1"
+    },
+    "96": {
+      "created_at_step": 96,
+      "destination": "10.51.49.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_096_prefix_filter_95",
+      "kind": "isolate",
+      "source": "192.168.95.10",
+      "via": null
+    },
+    "97": {
+      "created_at_step": 97,
+      "destination": "10.51.2.24",
+      "headers": {
+        "dst_port": 8443,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_097_permit_tcp_8443",
+      "kind": "reach",
+      "source": "10.51.49.13",
+      "via": null
+    },
+    "98": {
+      "created_at_step": 98,
+      "destination": "10.51.1.47",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_098_deny_tcp_8000",
+      "kind": "isolate",
+      "source": "10.51.48.42",
+      "via": null
+    },
+    "99": {
+      "created_at_step": 99,
+      "destination": "10.51.2.35",
+      "headers": {
+        "dst_port": 8888,
+        "protocol": "tcp"
+      },
+      "id": "topo_test_large_test_seq_len200_001_step_099_permit_tcp_8888",
+      "kind": "reach",
+      "source": "10.51.48.46",
+      "via": null
+    }
+  },
+  "jsonl_sha256": "460e74df2be92831e847278b0d37043e1ba6b394d795b46cbfdf31d5164d91dd",
+  "length": 200,
+  "seed": 3200,
+  "sequence_id": "topo_test_large_test_seq_len200_001",
+  "split": "test",
+  "topology_id": "topo_test_large",
+  "trap_count": 60,
+  "trap_ratio": 0.3,
+  "traps": {
+    "10": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_000_deny_tcp_143",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 143' to te_l_r49 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_test_seq_len200_001_step_000_deny_tcp_143'.",
+      "step": 10
+    },
+    "11": {
+      "broken_invariant_id": "topo_test_large_inv_15_reach_intra_vrf_corp",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.101.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.101.10' and breaking invariant 'topo_test_large_inv_15_reach_intra_vrf_corp'.",
+      "step": 11
+    },
+    "12": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r48, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST'.",
+      "step": 12
+    },
+    "13": {
+      "broken_invariant_id": "topo_test_large_inv_16_isolate_fw_mgmt_ssh",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_16_isolate_fw_mgmt_ssh'.",
+      "step": 13
+    },
+    "14": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_008_vrf_flow_8",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.101.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.101.20' and breaking invariant 'topo_test_large_test_seq_len200_001_step_008_vrf_flow_8'.",
+      "step": 14
+    },
+    "16": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r48, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST'.",
+      "step": 16
+    },
+    "2": {
+      "broken_invariant_id": "topo_test_large_inv_13_isolate_reverse_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_13_isolate_reverse_tcp_3389'.",
+      "step": 2
+    },
+    "21": {
+      "broken_invariant_id": "topo_test_large_inv_10_isolate_tcp_23",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 23' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_10_isolate_tcp_23'.",
+      "step": 21
+    },
+    "23": {
+      "broken_invariant_id": "topo_test_large_inv_01_reach_tcp_80",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.1.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.1.0' and breaking invariant 'topo_test_large_inv_01_reach_tcp_80'.",
+      "step": 23
+    },
+    "25": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_018_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r1, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_018_vrf_isolate_CORP_GUEST'.",
+      "step": 25
+    },
+    "26": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_000_deny_tcp_143",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 143' to te_l_r49 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_test_seq_len200_001_step_000_deny_tcp_143'.",
+      "step": 26
+    },
+    "27": {
+      "broken_invariant_id": "topo_test_large_inv_04_reach_icmp",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.1.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.1.10' and breaking invariant 'topo_test_large_inv_04_reach_icmp'.",
+      "step": 27
+    },
+    "28": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_018_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r1, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_018_vrf_isolate_CORP_GUEST'.",
+      "step": 28
+    },
+    "30": {
+      "broken_invariant_id": "topo_test_large_inv_08_isolate_tcp_22",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_08_isolate_tcp_22'.",
+      "step": 30
+    },
+    "31": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_021_permit_shadow_23",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.0.0 0.0.0.255 any' to te_l_fw1 EDGE_IN, accidentally blocking earlier required source '10.51.0.69' and breaking invariant 'topo_test_large_test_seq_len200_001_step_021_permit_shadow_23'.",
+      "step": 31
+    },
+    "32": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_003_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r1, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_003_vrf_isolate_CORP_GUEST'.",
+      "step": 32
+    },
+    "35": {
+      "broken_invariant_id": "topo_test_large_inv_16_isolate_fw_mgmt_ssh",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_16_isolate_fw_mgmt_ssh'.",
+      "step": 35
+    },
+    "36": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_028_vrf_flow_28",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.101.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.101.20' and breaking invariant 'topo_test_large_test_seq_len200_001_step_028_vrf_flow_28'.",
+      "step": 36
+    },
+    "39": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r49, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST'.",
+      "step": 39
+    },
+    "4": {
+      "broken_invariant_id": "topo_test_large_inv_15_reach_intra_vrf_corp",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.101.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.101.10' and breaking invariant 'topo_test_large_inv_15_reach_intra_vrf_corp'.",
+      "step": 4
+    },
+    "42": {
+      "broken_invariant_id": "topo_test_large_inv_16_isolate_fw_mgmt_ssh",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_16_isolate_fw_mgmt_ssh'.",
+      "step": 42
+    },
+    "44": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_010_permit_shadow_143",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.49.0 0.0.0.255 any' to te_l_r49 EDGE_IN, accidentally blocking earlier required source '10.51.49.76' and breaking invariant 'topo_test_large_test_seq_len200_001_step_010_permit_shadow_143'.",
+      "step": 44
+    },
+    "46": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r49, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST'.",
+      "step": 46
+    },
+    "49": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_033_deny_tcp_8000",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 8000' to te_l_r1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_test_seq_len200_001_step_033_deny_tcp_8000'.",
+      "step": 49
+    },
+    "5": {
+      "broken_invariant_id": "topo_test_large_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r1, leaking traffic into GUEST and breaking invariant 'topo_test_large_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 5
+    },
+    "51": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_010_permit_shadow_143",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.49.0 0.0.0.255 any' to te_l_r49 EDGE_IN, accidentally blocking earlier required source '10.51.49.76' and breaking invariant 'topo_test_large_test_seq_len200_001_step_010_permit_shadow_143'.",
+      "step": 51
+    },
+    "52": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_018_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r1, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_018_vrf_isolate_CORP_GUEST'.",
+      "step": 52
+    },
+    "53": {
+      "broken_invariant_id": "topo_test_large_inv_12_isolate_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_12_isolate_tcp_3389'.",
+      "step": 53
+    },
+    "54": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_032_vrf_flow_32",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.101.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.101.20' and breaking invariant 'topo_test_large_test_seq_len200_001_step_032_vrf_flow_32'.",
+      "step": 54
+    },
+    "56": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r49, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST'.",
+      "step": 56
+    },
+    "59": {
+      "broken_invariant_id": "topo_test_large_inv_12_isolate_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_12_isolate_tcp_3389'.",
+      "step": 59
+    },
+    "6": {
+      "broken_invariant_id": "topo_test_large_inv_08_isolate_tcp_22",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_08_isolate_tcp_22'.",
+      "step": 6
+    },
+    "60": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_010_permit_shadow_143",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.49.0 0.0.0.255 any' to te_l_r49 EDGE_IN, accidentally blocking earlier required source '10.51.49.76' and breaking invariant 'topo_test_large_test_seq_len200_001_step_010_permit_shadow_143'.",
+      "step": 60
+    },
+    "61": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r48, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST'.",
+      "step": 61
+    },
+    "62": {
+      "broken_invariant_id": "topo_test_large_inv_03_reach_tcp_53",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.1.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.1.10' and breaking invariant 'topo_test_large_inv_03_reach_tcp_53'.",
+      "step": 62
+    },
+    "63": {
+      "broken_invariant_id": "topo_test_large_inv_02_reach_tcp_443",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.1.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.1.10' and breaking invariant 'topo_test_large_inv_02_reach_tcp_443'.",
+      "step": 63
+    },
+    "64": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_039_vrf_flow_39",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.149.0 0.0.0.255 any' to te_l_r49 EDGE_IN, accidentally blocking earlier required source '10.51.149.20' and breaking invariant 'topo_test_large_test_seq_len200_001_step_039_vrf_flow_39'.",
+      "step": 64
+    },
+    "67": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_033_deny_tcp_8000",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 8000' to te_l_r1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_test_seq_len200_001_step_033_deny_tcp_8000'.",
+      "step": 67
+    },
+    "68": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r48, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST'.",
+      "step": 68
+    },
+    "69": {
+      "broken_invariant_id": "topo_test_large_inv_09_isolate_reverse_tcp_22",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_09_isolate_reverse_tcp_22'.",
+      "step": 69
+    },
+    "7": {
+      "broken_invariant_id": "topo_test_large_inv_04_reach_icmp",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.1.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.1.10' and breaking invariant 'topo_test_large_inv_04_reach_icmp'.",
+      "step": 7
+    },
+    "70": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_034_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r49, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_034_vrf_isolate_CORP_GUEST'.",
+      "step": 70
+    },
+    "71": {
+      "broken_invariant_id": "topo_test_large_inv_08_isolate_tcp_22",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_08_isolate_tcp_22'.",
+      "step": 71
+    },
+    "72": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_003_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r1, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_003_vrf_isolate_CORP_GUEST'.",
+      "step": 72
+    },
+    "73": {
+      "broken_invariant_id": "topo_test_large_inv_13_isolate_reverse_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_13_isolate_reverse_tcp_3389'.",
+      "step": 73
+    },
+    "74": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_013_permit_shadow_22",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.0.0 0.0.0.255 any' to te_l_fw1 EDGE_IN, accidentally blocking earlier required source '10.51.0.80' and breaking invariant 'topo_test_large_test_seq_len200_001_step_013_permit_shadow_22'.",
+      "step": 74
+    },
+    "75": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r48, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_001_vrf_isolate_CORP_GUEST'.",
+      "step": 75
+    },
+    "78": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_050_deny_tcp_8000",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 8000' to te_l_r1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_test_seq_len200_001_step_050_deny_tcp_8000'.",
+      "step": 78
+    },
+    "79": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_070_vrf_flow_70",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.149.0 0.0.0.255 any' to te_l_r49 EDGE_IN, accidentally blocking earlier required source '10.51.149.20' and breaking invariant 'topo_test_large_test_seq_len200_001_step_070_vrf_flow_70'.",
+      "step": 79
+    },
+    "8": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_003_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r1, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_003_vrf_isolate_CORP_GUEST'.",
+      "step": 8
+    },
+    "80": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r49, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST'.",
+      "step": 80
+    },
+    "81": {
+      "broken_invariant_id": "topo_test_large_inv_12_isolate_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_12_isolate_tcp_3389'.",
+      "step": 81
+    },
+    "83": {
+      "broken_invariant_id": "topo_test_large_inv_15_reach_intra_vrf_corp",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.101.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.101.10' and breaking invariant 'topo_test_large_inv_15_reach_intra_vrf_corp'.",
+      "step": 83
+    },
+    "84": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r49, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_029_vrf_isolate_CORP_GUEST'.",
+      "step": 84
+    },
+    "85": {
+      "broken_invariant_id": "topo_test_large_inv_16_isolate_fw_mgmt_ssh",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to te_l_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_inv_16_isolate_fw_mgmt_ssh'.",
+      "step": 85
+    },
+    "86": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_055_permit_tcp_8080",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.49.0 0.0.0.255 any' to te_l_r49 EDGE_IN, accidentally blocking earlier required source '10.51.49.13' and breaking invariant 'topo_test_large_test_seq_len200_001_step_055_permit_tcp_8080'.",
+      "step": 86
+    },
+    "87": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_076_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r2, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_076_vrf_isolate_CORP_GUEST'.",
+      "step": 87
+    },
+    "88": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_017_deny_tcp_993",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 993' to te_l_r2 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_test_large_test_seq_len200_001_step_017_deny_tcp_993'.",
+      "step": 88
+    },
+    "89": {
+      "broken_invariant_id": "topo_test_large_inv_07_reach_udp_53",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.51.1.0 0.0.0.255 any' to te_l_r1 EDGE_IN, accidentally blocking earlier required source '10.51.1.10' and breaking invariant 'topo_test_large_inv_07_reach_udp_53'.",
+      "step": 89
+    },
+    "90": {
+      "broken_invariant_id": "topo_test_large_test_seq_len200_001_step_076_vrf_isolate_CORP_GUEST",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from GUEST to CORP (ip vrf forwarding CORP) on te_l_r2, leaking traffic into GUEST and breaking invariant 'topo_test_large_test_seq_len200_001_step_076_vrf_isolate_CORP_GUEST'.",
+      "step": 90
+    }
+  }
+}

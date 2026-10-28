@@ -1,0 +1,155 @@
+{
+  "generator_version": "1.0.0",
+  "invariants_added": {
+    "0": "topo_train_small_train_seq_003_step_000_vrf_isolate_RED_BLUE",
+    "1": "topo_train_small_train_seq_003_step_001_deny_tcp_21",
+    "10": "topo_train_small_train_seq_003_step_010_permit_shadow_3389",
+    "11": "topo_train_small_train_seq_003_step_011_deny_tcp_110",
+    "12": "topo_train_small_train_seq_003_step_012_permit_shadow_23",
+    "13": "topo_train_small_train_seq_003_step_013_filter_overlap",
+    "14": "topo_train_small_train_seq_003_step_014_permit_shadow_22",
+    "15": "topo_train_small_train_seq_003_step_015_deny_tcp_110",
+    "16": "topo_train_small_train_seq_003_step_016_filter_overlap",
+    "17": "topo_train_small_train_seq_003_step_017_filter_overlap",
+    "18": "topo_train_small_train_seq_003_step_018_vrf_isolate_RED_BLUE",
+    "19": "topo_train_small_train_seq_003_step_019_deny_tcp_69",
+    "2": "topo_train_small_train_seq_003_step_002_filter_overlap",
+    "20": "topo_train_small_train_seq_003_step_020_permit_shadow_22",
+    "21": "topo_train_small_train_seq_003_step_021_prefix_filter_37",
+    "22": "topo_train_small_train_seq_003_step_022_filter_overlap",
+    "23": "topo_train_small_train_seq_003_step_023_filter_overlap",
+    "24": "topo_train_small_train_seq_003_step_024_deny_tcp_69",
+    "25": "topo_train_small_train_seq_003_step_025_deny_tcp_143",
+    "26": "topo_train_small_train_seq_003_step_026_permit_tcp_8080",
+    "27": "topo_train_small_train_seq_003_step_027_prefix_filter_99",
+    "28": "topo_train_small_train_seq_003_step_028_vrf_isolate_RED_BLUE",
+    "29": "topo_train_small_train_seq_003_step_029_permit_tcp_2222",
+    "3": "topo_train_small_train_seq_003_step_003_permit_shadow_3389",
+    "30": "topo_train_small_train_seq_003_step_030_waypoint_80",
+    "31": "topo_train_small_train_seq_003_step_031_prefix_filter_193",
+    "32": "topo_train_small_train_seq_003_step_032_permit_tcp_9000",
+    "33": "topo_train_small_train_seq_003_step_033_vrf_isolate_RED_BLUE",
+    "34": "topo_train_small_train_seq_003_step_034_permit_tcp_8080",
+    "35": "topo_train_small_train_seq_003_step_035_deny_tcp_69",
+    "36": "topo_train_small_train_seq_003_step_036_waypoint_80",
+    "37": "topo_train_small_train_seq_003_step_037_permit_tcp_8443",
+    "38": "topo_train_small_train_seq_003_step_038_waypoint_80",
+    "39": "topo_train_small_train_seq_003_step_039_permit_tcp_8443",
+    "4": "topo_train_small_train_seq_003_step_004_filter_overlap",
+    "40": "topo_train_small_train_seq_003_step_040_waypoint_8080",
+    "41": "topo_train_small_train_seq_003_step_041_deny_tcp_993",
+    "42": "topo_train_small_train_seq_003_step_042_prefix_filter_51",
+    "43": "topo_train_small_train_seq_003_step_043_vrf_isolate_RED_BLUE",
+    "44": "topo_train_small_train_seq_003_step_044_permit_tcp_8443",
+    "45": "topo_train_small_train_seq_003_step_045_prefix_filter_79",
+    "46": "topo_train_small_train_seq_003_step_046_waypoint_443",
+    "47": "topo_train_small_train_seq_003_step_047_vrf_isolate_RED_BLUE",
+    "48": "topo_train_small_train_seq_003_step_048_waypoint_443",
+    "49": "topo_train_small_train_seq_003_step_049_permit_tcp_8443",
+    "5": "topo_train_small_train_seq_003_step_005_vrf_flow_66",
+    "6": "topo_train_small_train_seq_003_step_006_waypoint_8080",
+    "7": "topo_train_small_train_seq_003_step_007_permit_tcp_2222",
+    "8": "topo_train_small_train_seq_003_step_008_vrf_flow_66",
+    "9": "topo_train_small_train_seq_003_step_009_permit_shadow_3389"
+  },
+  "jsonl_sha256": "24b0abac13664bdf1dfc73bd274385ec9d100080798fcaa607e090c124842a57",
+  "length": 50,
+  "seed": 2033,
+  "sequence_id": "topo_train_small_train_seq_003",
+  "split": "train",
+  "topology_id": "topo_train_small",
+  "trap_count": 15,
+  "trap_ratio": 0.3,
+  "traps": {
+    "10": {
+      "broken_invariant_id": "topo_train_small_inv_12_isolate_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_12_isolate_tcp_3389'.",
+      "step": 10
+    },
+    "12": {
+      "broken_invariant_id": "topo_train_small_inv_10_isolate_tcp_23",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 23' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_10_isolate_tcp_23'.",
+      "step": 12
+    },
+    "13": {
+      "broken_invariant_id": "topo_train_small_train_seq_003_step_007_permit_tcp_2222",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.2.0 0.0.0.255 any' to tr_r2 EDGE_IN, accidentally blocking earlier required source '10.11.2.28' and breaking invariant 'topo_train_small_train_seq_003_step_007_permit_tcp_2222'.",
+      "step": 13
+    },
+    "14": {
+      "broken_invariant_id": "topo_train_small_inv_09_isolate_reverse_tcp_22",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_09_isolate_reverse_tcp_22'.",
+      "step": 14
+    },
+    "16": {
+      "broken_invariant_id": "topo_train_small_inv_03_reach_tcp_53",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.1.0 0.0.0.255 any' to tr_r1 EDGE_IN, accidentally blocking earlier required source '10.11.1.10' and breaking invariant 'topo_train_small_inv_03_reach_tcp_53'.",
+      "step": 16
+    },
+    "17": {
+      "broken_invariant_id": "topo_train_small_inv_07_reach_udp_53",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.1.0 0.0.0.255 any' to tr_r1 EDGE_IN, accidentally blocking earlier required source '10.11.1.10' and breaking invariant 'topo_train_small_inv_07_reach_udp_53'.",
+      "step": 17
+    },
+    "2": {
+      "broken_invariant_id": "topo_train_small_inv_02_reach_tcp_443",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.1.0 0.0.0.255 any' to tr_r1 EDGE_IN, accidentally blocking earlier required source '10.11.1.10' and breaking invariant 'topo_train_small_inv_02_reach_tcp_443'.",
+      "step": 2
+    },
+    "20": {
+      "broken_invariant_id": "topo_train_small_inv_08_isolate_tcp_22",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 22' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_08_isolate_tcp_22'.",
+      "step": 20
+    },
+    "22": {
+      "broken_invariant_id": "topo_train_small_train_seq_003_step_003_permit_shadow_3389",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.9.0 0.0.0.255 any' to tr_r9 EDGE_IN, accidentally blocking earlier required source '10.11.9.69' and breaking invariant 'topo_train_small_train_seq_003_step_003_permit_shadow_3389'.",
+      "step": 22
+    },
+    "23": {
+      "broken_invariant_id": "topo_train_small_train_seq_003_step_009_permit_shadow_3389",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.9.0 0.0.0.255 any' to tr_r9 EDGE_IN, accidentally blocking earlier required source '10.11.9.73' and breaking invariant 'topo_train_small_train_seq_003_step_009_permit_shadow_3389'.",
+      "step": 23
+    },
+    "3": {
+      "broken_invariant_id": "topo_train_small_inv_13_isolate_reverse_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_13_isolate_reverse_tcp_3389'.",
+      "step": 3
+    },
+    "4": {
+      "broken_invariant_id": "topo_train_small_inv_05_reach_reverse_tcp_80",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.9.0 0.0.0.255 any' to tr_r9 EDGE_IN, accidentally blocking earlier required source '10.11.9.10' and breaking invariant 'topo_train_small_inv_05_reach_reverse_tcp_80'.",
+      "step": 4
+    },
+    "5": {
+      "broken_invariant_id": "topo_train_small_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface VRF from 'BLUE' to 'RED' or injects cross-VRF route on tr_r1, leaking traffic into BLUE and breaking invariant 'topo_train_small_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 5
+    },
+    "8": {
+      "broken_invariant_id": "topo_train_small_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface VRF from 'BLUE' to 'RED' or injects cross-VRF route on tr_r1, leaking traffic into BLUE and breaking invariant 'topo_train_small_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 8
+    },
+    "9": {
+      "broken_invariant_id": "topo_train_small_inv_13_isolate_reverse_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_13_isolate_reverse_tcp_3389'.",
+      "step": 9
+    }
+  }
+}

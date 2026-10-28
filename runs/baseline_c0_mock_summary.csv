@@ -1,0 +1,41 @@
+# NOTICE,"PROVISIONAL, reference oracle only"
+# Section: Summary Metrics
+metric,value
+total_sequences,2
+total_steps,40
+regression_half_life,3.0
+half_life_ci_lower,3.0
+half_life_ci_upper,3.0
+is_half_life_censored,False
+
+# Section: Failure Breakdown
+outcome,count,rate
+SUCCESS,4,0.1000
+FORWARD_FAIL,2,0.0500
+REGRESSION,17,0.4250
+BOTH,17,0.4250
+PARSE_FAIL,0,0.0000
+REJECTED,0,0.0000
+
+# Section: Per-Step Series
+step,success_rate,mean_broken_invariants
+0,1.0000,0.0000
+1,1.0000,0.0000
+2,0.0000,0.0000
+3,0.0000,1.0000
+4,0.0000,1.5000
+5,0.0000,2.0000
+6,0.0000,2.5000
+7,0.0000,3.0000
+8,0.0000,4.0000
+9,0.0000,4.0000
+10,0.0000,4.5000
+11,0.0000,5.0000
+12,0.0000,5.5000
+13,0.0000,6.0000
+14,0.0000,6.5000
+15,0.0000,7.0000
+16,0.0000,7.0000
+17,0.0000,8.0000
+18,0.0000,8.5000
+19,0.0000,9.0000

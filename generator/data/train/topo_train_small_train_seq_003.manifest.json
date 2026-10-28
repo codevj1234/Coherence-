@@ -1,0 +1,693 @@
+{
+  "generator_version": "1.0.0",
+  "invariants_added": {
+    "0": {
+      "created_at_step": 0,
+      "destination": "10.200.1.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_000_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.100.1.20",
+      "via": null
+    },
+    "1": {
+      "created_at_step": 1,
+      "destination": "10.11.2.33",
+      "headers": {
+        "dst_port": 21,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_001_deny_tcp_21",
+      "kind": "isolate",
+      "source": "10.11.8.35",
+      "via": null
+    },
+    "10": {
+      "created_at_step": 10,
+      "destination": "10.11.9.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_010_filter_overlap",
+      "kind": "isolate",
+      "source": "10.11.1.202",
+      "via": null
+    },
+    "11": {
+      "created_at_step": 11,
+      "destination": "10.11.9.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_011_prefix_filter_42",
+      "kind": "isolate",
+      "source": "192.168.42.10",
+      "via": null
+    },
+    "12": {
+      "created_at_step": 12,
+      "destination": "10.11.101.70",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_012_vrf_flow_12",
+      "kind": "reach",
+      "source": "10.11.101.10",
+      "via": null
+    },
+    "13": {
+      "created_at_step": 13,
+      "destination": "10.11.1.89",
+      "headers": {
+        "dst_port": 23,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_013_permit_shadow_23",
+      "kind": "reach",
+      "source": "10.11.0.87",
+      "via": null
+    },
+    "14": {
+      "created_at_step": 14,
+      "destination": "10.11.9.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_014_filter_overlap",
+      "kind": "isolate",
+      "source": "10.11.1.202",
+      "via": null
+    },
+    "15": {
+      "created_at_step": 15,
+      "destination": "10.11.8.19",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_015_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.11.9.12",
+      "via": null
+    },
+    "16": {
+      "created_at_step": 16,
+      "destination": "10.11.101.80",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_016_vrf_flow_16",
+      "kind": "reach",
+      "source": "10.11.101.10",
+      "via": null
+    },
+    "17": {
+      "created_at_step": 17,
+      "destination": "10.11.9.88",
+      "headers": {
+        "dst_port": 21,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_017_permit_shadow_21",
+      "kind": "reach",
+      "source": "10.11.8.72",
+      "via": null
+    },
+    "18": {
+      "created_at_step": 18,
+      "destination": "10.11.9.43",
+      "headers": {
+        "dst_port": 443,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_018_waypoint_443",
+      "kind": "waypoint",
+      "source": "10.11.0.45",
+      "via": "tr_fw1"
+    },
+    "19": {
+      "created_at_step": 19,
+      "destination": "10.11.1.28",
+      "headers": {
+        "dst_port": 8443,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_019_permit_tcp_8443",
+      "kind": "reach",
+      "source": "10.11.9.35",
+      "via": null
+    },
+    "2": {
+      "created_at_step": 2,
+      "destination": "10.11.9.28",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_002_deny_tcp_8000",
+      "kind": "isolate",
+      "source": "10.11.1.30",
+      "via": null
+    },
+    "20": {
+      "created_at_step": 20,
+      "destination": "10.11.9.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_020_filter_overlap",
+      "kind": "isolate",
+      "source": "10.11.1.202",
+      "via": null
+    },
+    "21": {
+      "created_at_step": 21,
+      "destination": "10.11.8.35",
+      "headers": {
+        "dst_port": 993,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_021_deny_tcp_993",
+      "kind": "isolate",
+      "source": "10.11.2.43",
+      "via": null
+    },
+    "22": {
+      "created_at_step": 22,
+      "destination": "10.11.101.65",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_022_vrf_flow_22",
+      "kind": "reach",
+      "source": "10.11.101.10",
+      "via": null
+    },
+    "23": {
+      "created_at_step": 23,
+      "destination": "10.11.0.86",
+      "headers": {
+        "dst_port": 8000,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_023_permit_shadow_8000",
+      "kind": "reach",
+      "source": "10.11.1.61",
+      "via": null
+    },
+    "24": {
+      "created_at_step": 24,
+      "destination": "10.11.1.89",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_024_filter_overlap",
+      "kind": "isolate",
+      "source": "10.11.0.215",
+      "via": null
+    },
+    "25": {
+      "created_at_step": 25,
+      "destination": "10.11.101.88",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_025_vrf_flow_25",
+      "kind": "reach",
+      "source": "10.11.101.10",
+      "via": null
+    },
+    "26": {
+      "created_at_step": 26,
+      "destination": "10.11.2.14",
+      "headers": {
+        "dst_port": 21,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_026_deny_tcp_21",
+      "kind": "isolate",
+      "source": "10.11.8.22",
+      "via": null
+    },
+    "27": {
+      "created_at_step": 27,
+      "destination": "10.11.9.36",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_027_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.11.0.46",
+      "via": "tr_fw1"
+    },
+    "28": {
+      "created_at_step": 28,
+      "destination": "10.11.2.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_028_prefix_filter_156",
+      "kind": "isolate",
+      "source": "192.168.156.10",
+      "via": null
+    },
+    "29": {
+      "created_at_step": 29,
+      "destination": "10.11.9.28",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_029_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.11.0.11",
+      "via": "tr_fw1"
+    },
+    "3": {
+      "created_at_step": 3,
+      "destination": "10.11.2.79",
+      "headers": {
+        "dst_port": 3389,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_003_permit_shadow_3389",
+      "kind": "reach",
+      "source": "10.11.0.75",
+      "via": null
+    },
+    "30": {
+      "created_at_step": 30,
+      "destination": "10.11.8.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_030_prefix_filter_37",
+      "kind": "isolate",
+      "source": "192.168.37.10",
+      "via": null
+    },
+    "31": {
+      "created_at_step": 31,
+      "destination": "10.11.208.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_031_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.11.108.20",
+      "via": null
+    },
+    "32": {
+      "created_at_step": 32,
+      "destination": "10.11.8.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_032_prefix_filter_128",
+      "kind": "isolate",
+      "source": "192.168.128.10",
+      "via": null
+    },
+    "33": {
+      "created_at_step": 33,
+      "destination": "10.11.209.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_033_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.11.109.20",
+      "via": null
+    },
+    "34": {
+      "created_at_step": 34,
+      "destination": "10.11.209.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_034_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.11.109.20",
+      "via": null
+    },
+    "35": {
+      "created_at_step": 35,
+      "destination": "10.11.202.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_035_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.11.102.20",
+      "via": null
+    },
+    "36": {
+      "created_at_step": 36,
+      "destination": "10.11.201.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_036_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.11.101.20",
+      "via": null
+    },
+    "37": {
+      "created_at_step": 37,
+      "destination": "10.11.8.41",
+      "headers": {
+        "dst_port": 8443,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_037_permit_tcp_8443",
+      "kind": "reach",
+      "source": "10.11.2.36",
+      "via": null
+    },
+    "38": {
+      "created_at_step": 38,
+      "destination": "10.11.9.21",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_038_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.11.2.45",
+      "via": null
+    },
+    "39": {
+      "created_at_step": 39,
+      "destination": "10.11.8.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_039_prefix_filter_156",
+      "kind": "isolate",
+      "source": "192.168.156.10",
+      "via": null
+    },
+    "4": {
+      "created_at_step": 4,
+      "destination": "10.11.1.10",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_004_filter_overlap",
+      "kind": "isolate",
+      "source": "10.11.9.202",
+      "via": null
+    },
+    "40": {
+      "created_at_step": 40,
+      "destination": "10.11.208.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_040_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.11.108.20",
+      "via": null
+    },
+    "41": {
+      "created_at_step": 41,
+      "destination": "10.11.9.29",
+      "headers": {
+        "dst_port": 2222,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_041_permit_tcp_2222",
+      "kind": "reach",
+      "source": "10.11.2.24",
+      "via": null
+    },
+    "42": {
+      "created_at_step": 42,
+      "destination": "10.11.9.45",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_042_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.11.0.49",
+      "via": "tr_fw1"
+    },
+    "43": {
+      "created_at_step": 43,
+      "destination": "10.11.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_043_prefix_filter_193",
+      "kind": "isolate",
+      "source": "192.168.193.10",
+      "via": null
+    },
+    "44": {
+      "created_at_step": 44,
+      "destination": "10.11.1.23",
+      "headers": {
+        "dst_port": 9000,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_044_permit_tcp_9000",
+      "kind": "reach",
+      "source": "10.11.2.37",
+      "via": null
+    },
+    "45": {
+      "created_at_step": 45,
+      "destination": "10.11.202.20",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_045_vrf_isolate_RED_BLUE",
+      "kind": "isolate",
+      "source": "10.11.102.20",
+      "via": null
+    },
+    "46": {
+      "created_at_step": 46,
+      "destination": "10.11.1.45",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_046_permit_tcp_8080",
+      "kind": "reach",
+      "source": "10.11.9.42",
+      "via": null
+    },
+    "47": {
+      "created_at_step": 47,
+      "destination": "10.11.2.32",
+      "headers": {
+        "dst_port": 69,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_047_deny_tcp_69",
+      "kind": "isolate",
+      "source": "10.11.8.17",
+      "via": null
+    },
+    "48": {
+      "created_at_step": 48,
+      "destination": "10.11.9.26",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_048_waypoint_80",
+      "kind": "waypoint",
+      "source": "10.11.0.42",
+      "via": "tr_fw1"
+    },
+    "49": {
+      "created_at_step": 49,
+      "destination": "10.11.0.47",
+      "headers": {
+        "dst_port": 8443,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_049_permit_tcp_8443",
+      "kind": "reach",
+      "source": "10.11.1.13",
+      "via": null
+    },
+    "5": {
+      "created_at_step": 5,
+      "destination": "10.11.101.75",
+      "headers": {
+        "dst_port": 80,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_005_vrf_flow_5",
+      "kind": "reach",
+      "source": "10.11.101.10",
+      "via": null
+    },
+    "6": {
+      "created_at_step": 6,
+      "destination": "10.11.9.49",
+      "headers": {
+        "dst_port": 8080,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_006_waypoint_8080",
+      "kind": "waypoint",
+      "source": "10.11.0.12",
+      "via": "tr_fw1"
+    },
+    "7": {
+      "created_at_step": 7,
+      "destination": "10.11.1.1",
+      "headers": {
+        "protocol": "ip"
+      },
+      "id": "topo_train_small_train_seq_003_step_007_prefix_filter_39",
+      "kind": "isolate",
+      "source": "192.168.39.10",
+      "via": null
+    },
+    "8": {
+      "created_at_step": 8,
+      "destination": "10.11.1.37",
+      "headers": {
+        "dst_port": 21,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_008_deny_tcp_21",
+      "kind": "isolate",
+      "source": "10.11.8.35",
+      "via": null
+    },
+    "9": {
+      "created_at_step": 9,
+      "destination": "10.11.9.72",
+      "headers": {
+        "dst_port": 3389,
+        "protocol": "tcp"
+      },
+      "id": "topo_train_small_train_seq_003_step_009_permit_shadow_3389",
+      "kind": "reach",
+      "source": "10.11.0.73",
+      "via": null
+    }
+  },
+  "jsonl_sha256": "d6913d93bd46c4fe200bdc9c707663bb52d0de7c243e3b5bade167adf294c0ed",
+  "length": 50,
+  "seed": 2033,
+  "sequence_id": "topo_train_small_train_seq_003",
+  "split": "train",
+  "topology_id": "topo_train_small",
+  "trap_count": 15,
+  "trap_ratio": 0.3,
+  "traps": {
+    "10": {
+      "broken_invariant_id": "topo_train_small_inv_07_reach_udp_53",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.1.0 0.0.0.255 any' to tr_r1 EDGE_IN, accidentally blocking earlier required source '10.11.1.10' and breaking invariant 'topo_train_small_inv_07_reach_udp_53'.",
+      "step": 10
+    },
+    "12": {
+      "broken_invariant_id": "topo_train_small_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from BLUE to RED (ip vrf forwarding RED) on tr_r1, leaking traffic into BLUE and breaking invariant 'topo_train_small_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 12
+    },
+    "13": {
+      "broken_invariant_id": "topo_train_small_inv_11_isolate_reverse_tcp_23",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 23' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_11_isolate_reverse_tcp_23'.",
+      "step": 13
+    },
+    "14": {
+      "broken_invariant_id": "topo_train_small_inv_04_reach_icmp",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.1.0 0.0.0.255 any' to tr_r1 EDGE_IN, accidentally blocking earlier required source '10.11.1.10' and breaking invariant 'topo_train_small_inv_04_reach_icmp'.",
+      "step": 14
+    },
+    "16": {
+      "broken_invariant_id": "topo_train_small_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from BLUE to RED (ip vrf forwarding RED) on tr_r1, leaking traffic into BLUE and breaking invariant 'topo_train_small_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 16
+    },
+    "17": {
+      "broken_invariant_id": "topo_train_small_train_seq_003_step_001_deny_tcp_21",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 21' to tr_r8 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_train_seq_003_step_001_deny_tcp_21'.",
+      "step": 17
+    },
+    "20": {
+      "broken_invariant_id": "topo_train_small_inv_03_reach_tcp_53",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.1.0 0.0.0.255 any' to tr_r1 EDGE_IN, accidentally blocking earlier required source '10.11.1.10' and breaking invariant 'topo_train_small_inv_03_reach_tcp_53'.",
+      "step": 20
+    },
+    "22": {
+      "broken_invariant_id": "topo_train_small_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from BLUE to RED (ip vrf forwarding RED) on tr_r1, leaking traffic into BLUE and breaking invariant 'topo_train_small_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 22
+    },
+    "23": {
+      "broken_invariant_id": "topo_train_small_train_seq_003_step_002_deny_tcp_8000",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 8000' to tr_r1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_train_seq_003_step_002_deny_tcp_8000'.",
+      "step": 23
+    },
+    "24": {
+      "broken_invariant_id": "topo_train_small_train_seq_003_step_013_permit_shadow_23",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.0.0 0.0.0.255 any' to tr_fw1 EDGE_IN, accidentally blocking earlier required source '10.11.0.87' and breaking invariant 'topo_train_small_train_seq_003_step_013_permit_shadow_23'.",
+      "step": 24
+    },
+    "25": {
+      "broken_invariant_id": "topo_train_small_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from BLUE to RED (ip vrf forwarding RED) on tr_r1, leaking traffic into BLUE and breaking invariant 'topo_train_small_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 25
+    },
+    "3": {
+      "broken_invariant_id": "topo_train_small_inv_13_isolate_reverse_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_13_isolate_reverse_tcp_3389'.",
+      "step": 3
+    },
+    "4": {
+      "broken_invariant_id": "topo_train_small_inv_05_reach_reverse_tcp_80",
+      "kind": "prefix_overlap",
+      "naive_description": "Careless edit applies broad covering filter 'deny ip 10.11.9.0 0.0.0.255 any' to tr_r9 EDGE_IN, accidentally blocking earlier required source '10.11.9.10' and breaking invariant 'topo_train_small_inv_05_reach_reverse_tcp_80'.",
+      "step": 4
+    },
+    "5": {
+      "broken_invariant_id": "topo_train_small_inv_14_isolate_vrf_red_to_blue",
+      "kind": "isolation_leak",
+      "naive_description": "Careless edit reassigns interface GigabitEthernet0/12 from BLUE to RED (ip vrf forwarding RED) on tr_r1, leaking traffic into BLUE and breaking invariant 'topo_train_small_inv_14_isolate_vrf_red_to_blue'.",
+      "step": 5
+    },
+    "9": {
+      "broken_invariant_id": "topo_train_small_inv_13_isolate_reverse_tcp_3389",
+      "kind": "shadowing",
+      "naive_description": "Careless edit prepends broad permit rule 'permit tcp any any eq 3389' to tr_fw1 EDGE_IN, shadowing earlier deny rule and breaking invariant 'topo_train_small_inv_13_isolate_reverse_tcp_3389'.",
+      "step": 9
+    }
+  }
+}

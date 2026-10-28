@@ -1,0 +1,131 @@
+{
+  "$defs": {
+    "Condition": {
+      "description": "Experimental conditions varying the context and feedback provided to the LLM.\n\nC0: Baseline - only device configurations and the new intent text.\nC1: Verification feedback provided upon failure.\nC2: Multi-turn retry loop with progressive verification feedback.\nC3: Policy ledger provided containing all previously committed invariants.",
+      "enum": [
+        "C0",
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "title": "Condition",
+      "type": "string"
+    },
+    "StepOutcome": {
+      "description": "Classification of the verification result for a single configuration step.\n\nSUCCESS: New intent satisfied and no existing invariants broken.\nFORWARD_FAIL: New intent could not be satisfied, but no past invariants broken.\nREGRESSION: New intent satisfied, but one or more past invariants broken.\nBOTH: New intent failed AND past invariants broken.\nPARSE_FAIL: Output from LLM could not be parsed into valid device configuration blocks.\nREJECTED: LLM explicitly refused to perform the edit or generated an invalid response.",
+      "enum": [
+        "SUCCESS",
+        "FORWARD_FAIL",
+        "REGRESSION",
+        "BOTH",
+        "PARSE_FAIL",
+        "REJECTED"
+      ],
+      "title": "StepOutcome",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Record of an evaluated LLM interaction step.\n\nAppended to JSONL run logs to record parsing success, verification outcomes,\ntoken consumption, and wall-clock latency for statistical analysis.",
+  "properties": {
+    "run_id": {
+      "description": "Unique evaluation run identifier.",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "model": {
+      "description": "Model identifier or configuration name under test.",
+      "title": "Model",
+      "type": "string"
+    },
+    "condition": {
+      "$ref": "#/$defs/Condition",
+      "description": "Experimental context condition (C0-C3)."
+    },
+    "sequence_id": {
+      "description": "Identifier of the benchmark sequence.",
+      "title": "Sequence Id",
+      "type": "string"
+    },
+    "step": {
+      "description": "Step index within the sequence.",
+      "minimum": 0,
+      "title": "Step",
+      "type": "integer"
+    },
+    "parse_ok": {
+      "description": "True if model output successfully parsed into device configs.",
+      "title": "Parse Ok",
+      "type": "boolean"
+    },
+    "new_intent_ok": {
+      "description": "True if the new intent was satisfied according to the verification oracle.",
+      "title": "New Intent Ok",
+      "type": "boolean"
+    },
+    "broken_invariants": {
+      "description": "List of invariant IDs that were violated by the committed configuration.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Broken Invariants",
+      "type": "array"
+    },
+    "outcome": {
+      "$ref": "#/$defs/StepOutcome",
+      "description": "Summary outcome classification."
+    },
+    "retries": {
+      "default": 0,
+      "description": "Number of retries attempted in this step.",
+      "minimum": 0,
+      "title": "Retries",
+      "type": "integer"
+    },
+    "tokens_in": {
+      "description": "Input tokens consumed.",
+      "minimum": 0,
+      "title": "Tokens In",
+      "type": "integer"
+    },
+    "tokens_out": {
+      "description": "Output tokens generated.",
+      "minimum": 0,
+      "title": "Tokens Out",
+      "type": "integer"
+    },
+    "tokens_estimated": {
+      "default": false,
+      "description": "True if token counts were estimated using len(text)/4 heuristic instead of provider usage metadata.",
+      "title": "Tokens Estimated",
+      "type": "boolean"
+    },
+    "latency_ms": {
+      "description": "Elapsed wall-clock latency in milliseconds.",
+      "minimum": 0,
+      "title": "Latency Ms",
+      "type": "integer"
+    },
+    "committed": {
+      "description": "Whether the patch was committed to the active topology configuration.",
+      "title": "Committed",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "run_id",
+    "model",
+    "condition",
+    "sequence_id",
+    "step",
+    "parse_ok",
+    "new_intent_ok",
+    "outcome",
+    "tokens_in",
+    "tokens_out",
+    "latency_ms",
+    "committed"
+  ],
+  "title": "StepResult",
+  "type": "object"
+}
