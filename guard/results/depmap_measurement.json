@@ -1,0 +1,43 @@
+{
+ "rows": [
+  {
+   "intent_type": "acl_deny",
+   "steps": 126,
+   "regressions": 0,
+   "misses": 0,
+   "checked_share": 0.0167
+  },
+  {
+   "intent_type": "acl_permit",
+   "steps": 465,
+   "regressions": 21,
+   "misses": 0,
+   "checked_share": 0.0366
+  },
+  {
+   "intent_type": "prefix_filter",
+   "steps": 151,
+   "regressions": 70,
+   "misses": 0,
+   "checked_share": 0.142
+  },
+  {
+   "intent_type": "vrf_isolate",
+   "steps": 84,
+   "regressions": 147,
+   "misses": 0,
+   "checked_share": 0.1572
+  },
+  {
+   "intent_type": "waypoint",
+   "steps": 74,
+   "regressions": 4,
+   "misses": 0,
+   "checked_share": 0.1279
+  }
+ ],
+ "n_seq": 5,
+ "length": 60,
+ "model": "sim-small",
+ "judge": "reference"
+}

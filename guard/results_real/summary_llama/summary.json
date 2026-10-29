@@ -1,0 +1,120 @@
+{
+ "rows": [
+  {
+   "model": "llama3.1-8b",
+   "bed": "abilene",
+   "condition": "C0",
+   "steps_per_seq": 15,
+   "tokens_measured": true,
+   "runtime_errors": 0,
+   "sequences": 3,
+   "steps": 45,
+   "half_life": 7,
+   "half_life_censored": false,
+   "half_life_ci": [
+    1,
+    10
+   ],
+   "runs_with_regression": 3,
+   "regression_step_rate": 0.1111111111111111,
+   "final_violated_mean": 4.333333333333333,
+   "completion_rate": 0.35555555555555557,
+   "rejected_rate": 0.0,
+   "parse_fail_rate": 0.37777777777777777,
+   "forward_fail_rate": 0.2222222222222222,
+   "first_attempt_regression_rate": 0.1111111111111111,
+   "mean_retries": 0.0,
+   "tokens_in_per_step": 836.7777777777778,
+   "tokens_out_per_step": 445.3333333333333,
+   "dep_map_miss_rate": 0.07692307692307693,
+   "newly_broken_total": 13
+  },
+  {
+   "model": "llama3.1-8b",
+   "bed": "abilene",
+   "condition": "C3",
+   "steps_per_seq": 15,
+   "tokens_measured": true,
+   "runtime_errors": 0,
+   "sequences": 3,
+   "steps": 45,
+   "half_life": 16,
+   "half_life_censored": true,
+   "half_life_ci": [
+    16,
+    16
+   ],
+   "runs_with_regression": 0,
+   "regression_step_rate": 0.0,
+   "final_violated_mean": 0.0,
+   "completion_rate": 0.17777777777777778,
+   "rejected_rate": 0.8222222222222222,
+   "parse_fail_rate": 0.7333333333333333,
+   "forward_fail_rate": 0.06666666666666667,
+   "first_attempt_regression_rate": 0.2222222222222222,
+   "mean_retries": 2.6222222222222222,
+   "tokens_in_per_step": 5765.111111111111,
+   "tokens_out_per_step": 2536.777777777778,
+   "dep_map_miss_rate": 0.0,
+   "newly_broken_total": 8
+  }
+ ],
+ "comparisons": [
+  {
+   "model": "llama3.1-8b",
+   "bed": "abilene",
+   "a": "C0",
+   "b": "C3",
+   "metric": "final_violated",
+   "mean_diff": -4.333333333333333,
+   "ci": [
+    -7.0,
+    -2.0
+   ],
+   "p": 0.0,
+   "n": 3
+  },
+  {
+   "model": "llama3.1-8b",
+   "bed": "abilene",
+   "a": "C0",
+   "b": "C3",
+   "metric": "first_regression_step",
+   "mean_diff": 10.0,
+   "ci": [
+    6.0,
+    15.0
+   ],
+   "p": 0.0,
+   "n": 3
+  },
+  {
+   "model": "llama3.1-8b",
+   "bed": "abilene",
+   "a": "C0",
+   "b": "C3",
+   "metric": "completion",
+   "mean_diff": -0.17777777777777778,
+   "ci": [
+    -0.26666666666666666,
+    -0.06666666666666667
+   ],
+   "p": 0.0,
+   "n": 3
+  },
+  {
+   "model": "llama3.1-8b",
+   "bed": "abilene",
+   "a": "C0",
+   "b": "C3",
+   "metric": "tokens_in",
+   "mean_diff": 4928.333333333333,
+   "ci": [
+    4328.8,
+    5325.866666666667
+   ],
+   "p": 0.0,
+   "n": 3
+  }
+ ]
+}

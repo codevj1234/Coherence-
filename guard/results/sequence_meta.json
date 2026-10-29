@@ -1,0 +1,162 @@
+[
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 100,
+  "seq_id": "seq100",
+  "trap_ratio": 0.34,
+  "trap_steps": 34
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 101,
+  "seq_id": "seq101",
+  "trap_ratio": 0.31,
+  "trap_steps": 31
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 102,
+  "seq_id": "seq102",
+  "trap_ratio": 0.33,
+  "trap_steps": 33
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 103,
+  "seq_id": "seq103",
+  "trap_ratio": 0.32,
+  "trap_steps": 32
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 104,
+  "seq_id": "seq104",
+  "trap_ratio": 0.3,
+  "trap_steps": 30
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 105,
+  "seq_id": "seq105",
+  "trap_ratio": 0.31,
+  "trap_steps": 31
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 106,
+  "seq_id": "seq106",
+  "trap_ratio": 0.25,
+  "trap_steps": 25
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 107,
+  "seq_id": "seq107",
+  "trap_ratio": 0.33,
+  "trap_steps": 33
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 108,
+  "seq_id": "seq108",
+  "trap_ratio": 0.31,
+  "trap_steps": 31
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 109,
+  "seq_id": "seq109",
+  "trap_ratio": 0.28,
+  "trap_steps": 28
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 110,
+  "seq_id": "seq110",
+  "trap_ratio": 0.36,
+  "trap_steps": 36
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 111,
+  "seq_id": "seq111",
+  "trap_ratio": 0.33,
+  "trap_steps": 33
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 112,
+  "seq_id": "seq112",
+  "trap_ratio": 0.26,
+  "trap_steps": 26
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 113,
+  "seq_id": "seq113",
+  "trap_ratio": 0.26,
+  "trap_steps": 26
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 114,
+  "seq_id": "seq114",
+  "trap_ratio": 0.35,
+  "trap_steps": 35
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 115,
+  "seq_id": "seq115",
+  "trap_ratio": 0.25,
+  "trap_steps": 25
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 116,
+  "seq_id": "seq116",
+  "trap_ratio": 0.37,
+  "trap_steps": 37
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 117,
+  "seq_id": "seq117",
+  "trap_ratio": 0.31,
+  "trap_steps": 31
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 118,
+  "seq_id": "seq118",
+  "trap_ratio": 0.31,
+  "trap_steps": 31
+ },
+ {
+  "discarded_candidates": 0,
+  "length": 100,
+  "seed": 119,
+  "seq_id": "seq119",
+  "trap_ratio": 0.32,
+  "trap_steps": 32
+ }
+]
