@@ -1,0 +1,272 @@
+{
+ "llama3.1-8b/C0": {
+  "sequences": 3,
+  "steps": 45,
+  "success": 16,
+  "regressions": 5,
+  "regressed_sequences": 3,
+  "broken_at_end": [
+   4,
+   2,
+   7
+  ],
+  "rejected": 0,
+  "parse_fail_final": 17,
+  "first_attempt_regression": 5,
+  "tokens_in": 837,
+  "retries": 0.0,
+  "first_regression_steps": [
+   7,
+   10,
+   1
+  ],
+  "half_life": "7",
+  "by_type": {
+   "acl_deny": [
+    4,
+    6
+   ],
+   "acl_permit": [
+    11,
+    22
+   ],
+   "waypoint": [
+    0,
+    3
+   ],
+   "prefix_filter": [
+    1,
+    8
+   ],
+   "vrf_isolate": [
+    0,
+    6
+   ]
+  }
+ },
+ "llama3.1-8b/C3": {
+  "sequences": 3,
+  "steps": 45,
+  "success": 8,
+  "regressions": 0,
+  "regressed_sequences": 0,
+  "broken_at_end": [
+   0,
+   0,
+   0
+  ],
+  "rejected": 37,
+  "parse_fail_final": 33,
+  "first_attempt_regression": 10,
+  "tokens_in": 5765,
+  "retries": 2.62,
+  "first_regression_steps": [
+   null,
+   null,
+   null
+  ],
+  "half_life": "> 15",
+  "by_type": {
+   "acl_deny": [
+    1,
+    6
+   ],
+   "acl_permit": [
+    7,
+    22
+   ],
+   "waypoint": [
+    0,
+    3
+   ],
+   "prefix_filter": [
+    0,
+    8
+   ],
+   "vrf_isolate": [
+    0,
+    6
+   ]
+  }
+ },
+ "qwen2.5-coder-7b/C0": {
+  "sequences": 3,
+  "steps": 45,
+  "success": 25,
+  "regressions": 5,
+  "regressed_sequences": 3,
+  "broken_at_end": [
+   4,
+   1,
+   3
+  ],
+  "rejected": 0,
+  "parse_fail_final": 9,
+  "first_attempt_regression": 5,
+  "tokens_in": 920,
+  "retries": 0.0,
+  "first_regression_steps": [
+   5,
+   10,
+   1
+  ],
+  "half_life": "5",
+  "by_type": {
+   "acl_deny": [
+    6,
+    6
+   ],
+   "acl_permit": [
+    18,
+    22
+   ],
+   "waypoint": [
+    0,
+    3
+   ],
+   "prefix_filter": [
+    1,
+    8
+   ],
+   "vrf_isolate": [
+    0,
+    6
+   ]
+  }
+ },
+ "qwen2.5-coder-7b/C1": {
+  "sequences": 3,
+  "steps": 45,
+  "success": 31,
+  "regressions": 4,
+  "regressed_sequences": 3,
+  "broken_at_end": [
+   4,
+   3,
+   1
+  ],
+  "rejected": 0,
+  "parse_fail_final": 7,
+  "first_attempt_regression": 5,
+  "tokens_in": 2176,
+  "retries": 0.98,
+  "first_regression_steps": [
+   5,
+   10,
+   10
+  ],
+  "half_life": "10",
+  "by_type": {
+   "acl_deny": [
+    6,
+    6
+   ],
+   "acl_permit": [
+    21,
+    22
+   ],
+   "waypoint": [
+    0,
+    3
+   ],
+   "prefix_filter": [
+    2,
+    8
+   ],
+   "vrf_isolate": [
+    2,
+    6
+   ]
+  }
+ },
+ "qwen2.5-coder-7b/C2": {
+  "sequences": 3,
+  "steps": 45,
+  "success": 29,
+  "regressions": 2,
+  "regressed_sequences": 2,
+  "broken_at_end": [
+   0,
+   3,
+   2
+  ],
+  "rejected": 0,
+  "parse_fail_final": 9,
+  "first_attempt_regression": 4,
+  "tokens_in": 2959,
+  "retries": 1.22,
+  "first_regression_steps": [
+   null,
+   10,
+   3
+  ],
+  "half_life": "10",
+  "by_type": {
+   "acl_deny": [
+    6,
+    6
+   ],
+   "acl_permit": [
+    19,
+    22
+   ],
+   "waypoint": [
+    0,
+    3
+   ],
+   "prefix_filter": [
+    1,
+    8
+   ],
+   "vrf_isolate": [
+    3,
+    6
+   ]
+  }
+ },
+ "qwen2.5-coder-7b/C3": {
+  "sequences": 3,
+  "steps": 45,
+  "success": 29,
+  "regressions": 0,
+  "regressed_sequences": 0,
+  "broken_at_end": [
+   0,
+   0,
+   0
+  ],
+  "rejected": 16,
+  "parse_fail_final": 14,
+  "first_attempt_regression": 3,
+  "tokens_in": 4435,
+  "retries": 1.13,
+  "first_regression_steps": [
+   null,
+   null,
+   null
+  ],
+  "half_life": "> 15",
+  "by_type": {
+   "acl_deny": [
+    6,
+    6
+   ],
+   "acl_permit": [
+    21,
+    22
+   ],
+   "waypoint": [
+    0,
+    3
+   ],
+   "prefix_filter": [
+    0,
+    8
+   ],
+   "vrf_isolate": [
+    2,
+    6
+   ]
+  }
+ }
+}

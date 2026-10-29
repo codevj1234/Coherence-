@@ -1,6 +1,6 @@
 # Independent Audit Checklist: Test Cases & Invariant Rules (Guard Package Inspection)
 
-This checklist provides the formal technical audit of the 30 hand-made test cases defined in `guard/cuc/oracle.py` and the 15 baseline invariant policies defined in `guard/cuc/invariants.py` over the Abilene/Topology Zoo testbed (`guard/cuc/topology.py`).
+This checklist provides the formal technical audit of the 30 hand-made test cases defined in `guard/cuc/oracle.py` and the 15 baseline invariant policies defined in `guard/cuc/invariants.py` over the 9-device prototype test bed (`guard/cuc/topology.py`: core ring R1-R4, edge routers E1-E4, firewall FW).
 
 ## Audit Summary
 - **Total Test Cases Audited**: 30 (`S01`–`S10` safe, `B01`–`B10` breaking, `U01`–`U10` subtle)
