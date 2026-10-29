@@ -200,7 +200,10 @@ def compute_metrics(records: list[dict[str, Any]]) -> AggregateMetrics:
             step_broken_sums[step_idx] += v_now
             broken_by_step[step_idx] = v_now
 
-            is_reg = v_now > 0 or s.get("first_attempt_regression", False) or outcome in ("REGRESSION", "BOTH")
+            # a regression is a COMMITTED edit that broke an earlier policy; under C1-C3 a first attempt that would
+            # have regressed is retried or rejected, and under C3 rejected steps are never committed
+            committed = s.get("committed", True)
+            is_reg = v_now > 0 or (committed and outcome in ("REGRESSION", "BOTH"))
             if is_reg and first_reg_step is None:
                 first_reg_step = step_idx
 
