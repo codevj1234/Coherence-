@@ -112,6 +112,10 @@ def _parse_wildcard(ip_str: str, mask_str: str) -> ipaddress.IPv4Network:
 def _parse_acl_line(line: str, line_no: int) -> ACLRule | None:
     """Parse a single extended ACL rule line."""
     tokens = line.strip().split()
+    if tokens and tokens[0].isdigit():
+        # IOS sequence number ("10 permit tcp ..."), as written by most models and by 'show running-config':
+        # without this the whole line was dropped, so a numbered permit or deny silently did nothing
+        tokens = tokens[1:]
     if len(tokens) < 4:
         return None
 

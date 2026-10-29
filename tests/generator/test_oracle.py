@@ -123,3 +123,33 @@ def test_reference_oracle_vrf_isolation():
     )
     res = oracle.check(configs, [inv_vrf_isolate])
     assert res["test_vrf_corp_guest_isolate"] is True
+
+
+def test_reference_oracle_reads_sequence_numbered_acl_lines():
+    """An IOS sequence number ('10 deny ...') must not make the ACL line disappear."""
+    spec = get_topology("topo_test_small")
+    configs = generate_topology_configs(spec)
+    oracle = ReferenceOracle()
+    web = Invariant(id="web", kind=InvariantKind.REACH, source="10.21.1.10", destination="10.21.5.10",
+                    headers={"protocol": "tcp", "dst_port": 80}, created_at_step=0)
+    assert oracle.check(configs, [web])["web"] is True
+    dev = "te_s_r1"
+    numbered = configs[dev].replace("ip access-list extended EDGE_IN\n",
+                                    "ip access-list extended EDGE_IN\n 5 deny tcp any any eq 80\n", 1)
+    assert numbered != configs[dev]
+    assert oracle.check({**configs, dev: numbered}, [web])["web"] is False
+    detail = oracle.explain_failure({**configs, dev: numbered}, web)
+    assert detail.blocking_line == 1 and detail.rule_text == "5 deny tcp any any eq 80"
+
+
+def test_audit_trivial_flags_steps_that_hold_before_the_edit():
+    """The audit reports, per step, whether the new invariant already held before the gold patch."""
+    from pathlib import Path
+    from generator.audit_trivial import audit_sequence
+
+    manifest = Path(__file__).resolve().parents[2] / "generator/data/test/topo_test_small_test_seq_003.manifest.json"
+    rows = audit_sequence(manifest)
+    assert len(rows) == 50
+    step0 = rows[0]                                   # prefix filter on 192.168.124.0/24: source outside the network
+    assert step0["type"] == "prefix_filter" and step0["trivial"] and not step0["source_located"]
+    assert any(not r["trivial"] for r in rows)        # deny steps do change the network
