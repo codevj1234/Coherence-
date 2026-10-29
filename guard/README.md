@@ -13,8 +13,20 @@ Kaggle/Colab notebooks.
 | policies broken at step 15 (per sequence) | 4, 1, 3 | 4, 3, 1 | 0, 3, 2 | 0, 0, 0 |
 | prompt tokens per step | 920 | 2,176 | 2,959 | 4,435 |
 
-Logs and summary: `results_real/` (`results_real/summary/summary.md`). Three sequences are a pilot: lead with the
-counts, the bootstrap intervals are coarse.
+Second model, same 3 sequences (Llama-3.1-8B-Instruct, 4-bit, C0 and C3 only):
+| | C0 open loop | C3 full guard |
+|---|---|---|
+| edits that succeeded | 16 of 45 | 8 of 45 |
+| committed regressions | 5 | 0 |
+| policies broken at step 15 (per sequence) | 4, 2, 7 | 0, 0, 0 |
+| edits rejected by the guard | none | 37 (82%) |
+| prompt tokens per step | 837 | 5,765 |
+
+The guard prevents drift for both models; how much work still gets through depends on the model (Llama's C3
+answers were mostly invalid configs under the long ledger prompt).
+
+Logs and summaries: `results_real/` (`summary/summary.md` for Qwen, `summary_llama/summary.md` for Llama). Three
+sequences are a pilot: lead with the counts, the bootstrap intervals are coarse.
 
 ## Layout
 | path | what it is |
