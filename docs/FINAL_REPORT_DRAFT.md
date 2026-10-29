@@ -47,3 +47,17 @@ Evaluated across 3 independent seeds (45 total edit steps per condition) on the 
 ## 5. Independent Audit & Related Work
 - **Independent Audit**: All 30 oracle test cases and 15 baseline invariant policies in `guard/` were verified through rigorous technical audit (`docs/INDEPENDENT_AUDIT_CHECKLIST.md`).
 - **Related Work**: Positioned relative to recent literature (e.g., *Cornetto*, Protogeros et al., 2026; *Agentic Configuration Repair*, Asadli et al., 2026), highlighting our focus on cumulative sequential half-life over single-fault repair.
+
+---
+
+## 2.4 Visual Trajectory & Half-Life Analysis
+The figures below illustrate the trajectory of policy degradation and success across the 15-step editing sequences:
+
+1. **Regression Rates by Condition**:
+   ![Regression Rates](figures/regression_rates.png)
+
+2. **Cumulative Broken Rules Across Steps (1–15)**:
+   ![Cumulative Broken Rules](figures/cumulative_broken_rules.png)
+
+3. **Step-wise Survival Rate & Regression Half-Life with 95% Bootstrap CI**:
+   ![Survival and Half-Life](figures/survival_and_halflife.png)
